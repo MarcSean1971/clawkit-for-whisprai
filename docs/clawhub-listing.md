@@ -2,13 +2,15 @@
 
 ## Name
 
-ClawKit for WhisprAI
+ClawKit for WhisprAI (Legacy Package)
 
 ## Short Description
 
-Pair your OpenClaw computer with WhisprAI so Archie can act as a private local assistant.
+Legacy package. Please install @clawkit/clawkit-for-whisprai for ClawKit for WhisprAI.
 
 ## Long Description
+
+This is the old package name for ClawKit for WhisprAI. New users should install `@clawkit/clawkit-for-whisprai`.
 
 ClawKit for WhisprAI connects WhisprAI's Archie assistant to the user's own OpenClaw computer through an explicit, revocable pairing flow. The plugin polls WhisprAI for queued work, runs the local OpenClaw agent, and sends Archie the visible assistant reply.
 

@@ -1,8 +1,8 @@
 {
-  "id": "clawkit-whisprai",
-  "name": "ClawKit for WhisprAI",
+  "id": "whisprai",
+  "name": "ClawKit for WhisprAI (Legacy Package)",
   "version": "0.1.2",
-  "description": "Pair this OpenClaw computer with WhisprAI so Archie can act as a private local assistant.",
+  "description": "Legacy package. Please install @clawkit/clawkit-for-whisprai for ClawKit for WhisprAI.",
   "homepage": "https://whisprai.app",
   "repository": "https://github.com/MarcSean1971/whisprai-openclaw-plugin",
   "keywords": [

@@ -1,4 +1,6 @@
-# ClawKit for WhisprAI
+# ClawKit for WhisprAI Legacy Package
+
+This is the legacy package for ClawKit for WhisprAI. New users should install `@clawkit/clawkit-for-whisprai`.
 
 ClawKit for WhisprAI lets a user pair their own OpenClaw computer with WhisprAI so Archie can act as a private local assistant.
 

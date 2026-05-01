@@ -587,8 +587,8 @@ function registerCli(api) {
 }
 
 export default definePluginEntry({
-  id: "clawkit-whisprai",
-  name: "ClawKit for WhisprAI",
+  id: "whisprai",
+  name: "ClawKit for WhisprAI (Legacy Package)",
   description: "Pair this OpenClaw computer with WhisprAI as a private local assistant.",
   register(api) {
     runtimeConfig = api.pluginConfig || {};
