@@ -1,0 +1,32 @@
+name: Pairing problem
+description: Report trouble connecting OpenClaw to WhisprAI.
+title: "[Pairing]: "
+labels: ["pairing", "needs-triage"]
+body:
+  - type: textarea
+    id: stage
+    attributes:
+      label: Where did pairing fail?
+      description: Example stages include install, status, pair start, code exchange, first relay job, or revoke.
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands or screens used
+      description: Paste commands or describe the WhisprAI screen. Remove secrets before posting.
+      render: shell
+  - type: textarea
+    id: output
+    attributes:
+      label: Output or error
+      description: Remove secrets, relay tokens, inbound secrets, and private data before posting.
+      render: shell
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+  - type: input
+    id: openclaw
+    attributes:
+      label: OpenClaw version

@@ -1,0 +1,21 @@
+name: Workflow feedback
+description: Tell us where the product felt confusing or stressful.
+title: "[Feedback]: "
+labels: ["feedback", "usability"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: What felt confusing, slow, or unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: ideal
+    attributes:
+      label: What would the ideal experience look like?

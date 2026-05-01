@@ -1,0 +1,29 @@
+{
+  "id": "whisprai",
+  "name": "WhisprAI",
+  "version": "0.1.0",
+  "description": "Pair this OpenClaw computer with WhisprAI so Archie can act as a private local assistant.",
+  "homepage": "https://whisprai.app",
+  "repository": "https://github.com/MarcSean1971/whisprai-openclaw-plugin",
+  "keywords": [
+    "WhisprAI",
+    "Archie",
+    "OpenClaw",
+    "local assistant",
+    "private assistant",
+    "computer use"
+  ],
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "whispraiUrl": {
+        "type": "string",
+        "description": "WhisprAI app base URL."
+      }
+    }
+  }
+}

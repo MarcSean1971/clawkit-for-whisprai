@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest a new WhisprAI/OpenClaw workflow.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What should Archie be able to do?
+      description: Describe the real user workflow, not only the technical feature.
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why would this help?
+      description: Explain who benefits and what becomes easier.
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety or approval concerns
+      description: Mention any local file, browser, GitHub, payment, deployment, or private-data risks.

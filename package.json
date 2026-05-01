@@ -1,0 +1,49 @@
+{
+  "name": "@whisprai/openclaw-plugin",
+  "version": "0.1.0",
+  "description": "Local OpenClaw pairing bridge for WhisprAI Connect My Computer.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://whisprai.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcSean1971/whisprai-openclaw-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "whisprai",
+    "archie",
+    "ai-assistant",
+    "local-agent",
+    "computer-use",
+    "private-assistant"
+  ],
+  "scripts": {
+    "test": "node --test extract-agent-text.test.mjs",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "openclaw.plugin.json",
+    "index.js",
+    "extract-agent-text.js",
+    "extract-agent-text.test.mjs",
+    "docs"
+  ],
+  "exports": {
+    ".": "./index.js"
+  },
+  "openclaw": {
+    "extensions": ["./index.js"],
+    "runtimeExtensions": ["./index.js"],
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2",
+      "minGatewayVersion": "2026.3.24-beta.2"
+    }
+  }
+}
