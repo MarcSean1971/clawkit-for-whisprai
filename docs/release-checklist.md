@@ -14,7 +14,7 @@
 ```bash
 git init
 git add .
-git commit -m "Prepare WhisprAI OpenClaw plugin for public release"
+git commit -m "Prepare ClawKit for WhisprAI for public release"
 gh repo create MarcSean1971/whisprai-openclaw-plugin --public --source=. --remote=origin --push
 ```
 
@@ -23,9 +23,9 @@ gh repo create MarcSean1971/whisprai-openclaw-plugin --public --source=. --remot
 ```bash
 clawhub package publish . \
   --family code-plugin \
-  --name @whisprai/openclaw-plugin \
-  --display-name "WhisprAI" \
-  --version 0.1.1 \
+  --name @clawkit/clawkit-for-whisprai \
+  --display-name "ClawKit for WhisprAI" \
+  --version 0.1.2 \
   --source-repo MarcSean1971/whisprai-openclaw-plugin \
   --source-commit "$(git rev-parse HEAD)" \
   --source-ref main \

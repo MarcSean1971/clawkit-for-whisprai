@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a WhisprAI OpenClaw plugin problem.
+description: Report a ClawKit for WhisprAI problem.
 title: "[Bug]: "
 labels: ["bug", "needs-triage"]
 body:

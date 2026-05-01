@@ -2,7 +2,7 @@
 
 ## Positioning
 
-WhisprAI OpenClaw Plugin should be positioned as the safe bridge between a friendly assistant and the user's own computer.
+ClawKit for WhisprAI should be positioned as the safe bridge between a friendly assistant and the user's own computer.
 
 Core message:
 

@@ -1,6 +1,6 @@
-# WhisprAI OpenClaw Plugin
+# ClawKit for WhisprAI
 
-WhisprAI OpenClaw Plugin lets a user pair their own OpenClaw computer with WhisprAI so Archie can act as a private local assistant.
+ClawKit for WhisprAI lets a user pair their own OpenClaw computer with WhisprAI so Archie can act as a private local assistant.
 
 Hosted WhisprAI does not need direct access to `127.0.0.1`, a home router, a public tunnel, or the user's OpenClaw gateway. The plugin polls WhisprAI for queued work, runs the local OpenClaw agent, and sends Archie the result.
 
@@ -64,7 +64,7 @@ The plugin is designed for people who want WhisprAI to be more than a chat app. 
 ## Install From ClawHub
 
 ```bash
-openclaw plugins install @whisprai/openclaw-plugin
+openclaw plugins install @clawkit/clawkit-for-whisprai
 openclaw plugins enable whisprai
 openclaw gateway restart
 openclaw whisprai status

@@ -1,11 +1,12 @@
 {
   "id": "whisprai",
-  "name": "WhisprAI",
-  "version": "0.1.1",
+  "name": "ClawKit for WhisprAI",
+  "version": "0.1.2",
   "description": "Pair this OpenClaw computer with WhisprAI so Archie can act as a private local assistant.",
   "homepage": "https://whisprai.app",
   "repository": "https://github.com/MarcSean1971/whisprai-openclaw-plugin",
   "keywords": [
+    "ClawKit",
     "WhisprAI",
     "Archie",
     "OpenClaw",

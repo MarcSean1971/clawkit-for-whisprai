@@ -1,7 +1,7 @@
 {
-  "name": "@whisprai/openclaw-plugin",
-  "version": "0.1.1",
-  "description": "Local OpenClaw pairing bridge for WhisprAI Connect My Computer.",
+  "name": "@clawkit/clawkit-for-whisprai",
+  "version": "0.1.2",
+  "description": "ClawKit bridge that pairs OpenClaw with WhisprAI Connect My Computer.",
   "type": "module",
   "license": "MIT",
   "homepage": "https://whisprai.app",
@@ -13,6 +13,7 @@
     "url": "https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues"
   },
   "keywords": [
+    "clawkit",
     "openclaw",
     "whisprai",
     "archie",

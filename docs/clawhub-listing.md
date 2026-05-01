@@ -2,7 +2,7 @@
 
 ## Name
 
-WhisprAI
+ClawKit for WhisprAI
 
 ## Short Description
 
@@ -10,7 +10,7 @@ Pair your OpenClaw computer with WhisprAI so Archie can act as a private local a
 
 ## Long Description
 
-WhisprAI OpenClaw Plugin connects WhisprAI's Archie assistant to the user's own OpenClaw computer through an explicit, revocable pairing flow. The plugin polls WhisprAI for queued work, runs the local OpenClaw agent, and sends Archie the visible assistant reply.
+ClawKit for WhisprAI connects WhisprAI's Archie assistant to the user's own OpenClaw computer through an explicit, revocable pairing flow. The plugin polls WhisprAI for queued work, runs the local OpenClaw agent, and sends Archie the visible assistant reply.
 
 Hosted WhisprAI does not need direct access to `127.0.0.1`, a home router, a public tunnel, or the user's OpenClaw gateway. This keeps the user's computer private while still letting Archie use the user's local OpenClaw setup, configured tools, coding environment, browser workflows, and approval model.
 
@@ -23,7 +23,7 @@ https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues
 ## Install From ClawHub
 
 ```bash
-openclaw plugins install @whisprai/openclaw-plugin
+openclaw plugins install @clawkit/clawkit-for-whisprai
 openclaw plugins enable whisprai
 openclaw gateway restart
 openclaw whisprai status
@@ -36,9 +36,9 @@ After logging in with `clawhub login`, publish with:
 ```bash
 clawhub package publish . \
   --family code-plugin \
-  --name @whisprai/openclaw-plugin \
-  --display-name "WhisprAI" \
-  --version 0.1.1 \
+  --name @clawkit/clawkit-for-whisprai \
+  --display-name "ClawKit for WhisprAI" \
+  --version 0.1.2 \
   --source-repo MarcSean1971/whisprai-openclaw-plugin \
   --source-commit "$(git rev-parse HEAD)" \
   --source-ref main \
@@ -47,6 +47,8 @@ clawhub package publish . \
 
 ## Keywords
 
+- ClawKit
+- ClawKit for WhisprAI
 - WhisprAI
 - Archie
 - OpenClaw

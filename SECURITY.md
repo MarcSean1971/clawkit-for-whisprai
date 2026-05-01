@@ -1,6 +1,6 @@
 # Security
 
-WhisprAI OpenClaw Plugin pairs a user's local OpenClaw computer with WhisprAI. Treat installation like running local code.
+ClawKit for WhisprAI pairs a user's local OpenClaw computer with WhisprAI. Treat installation like running local code.
 
 ## Security Model
 
