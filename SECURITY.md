@@ -37,4 +37,4 @@ Please open a private security advisory on GitHub before publicly disclosing sec
 
 For non-security bugs, pairing failures, workflow feedback, or feature requests, use GitHub Issues:
 
-https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues
+https://github.com/MarcSean1971/clawkit-for-whisprai/issues

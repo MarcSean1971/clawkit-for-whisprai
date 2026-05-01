@@ -18,7 +18,7 @@ Version 0.1.1 removes file-backed pairing state from the plugin runtime. Persist
 
 This is an early public release. It is useful now, and it will be updated continuously. Constructive feedback, especially pairing issues, relay failures, privacy questions, and non-technical usability suggestions, is welcome at:
 
-https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues
+https://github.com/MarcSean1971/clawkit-for-whisprai/issues
 
 ## Install From ClawHub
 
@@ -38,11 +38,11 @@ clawhub package publish . \
   --family code-plugin \
   --name @clawkit/clawkit-for-whisprai \
   --display-name "ClawKit for WhisprAI" \
-  --version 0.1.2 \
-  --source-repo MarcSean1971/whisprai-openclaw-plugin \
+  --version 0.1.3 \
+  --source-repo MarcSean1971/clawkit-for-whisprai \
   --source-commit "$(git rev-parse HEAD)" \
   --source-ref main \
-  --changelog "Remove direct file-backed state from marketplace runtime"
+  --changelog "Rename GitHub repository to clawkit-for-whisprai"
 ```
 
 ## Keywords

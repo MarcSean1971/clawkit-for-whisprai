@@ -1,16 +1,16 @@
 {
   "name": "@clawkit/clawkit-for-whisprai",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ClawKit bridge that pairs OpenClaw with WhisprAI Connect My Computer.",
   "type": "module",
   "license": "MIT",
   "homepage": "https://whisprai.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarcSean1971/whisprai-openclaw-plugin.git"
+    "url": "git+https://github.com/MarcSean1971/clawkit-for-whisprai.git"
   },
   "bugs": {
-    "url": "https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues"
+    "url": "https://github.com/MarcSean1971/clawkit-for-whisprai/issues"
   },
   "keywords": [
     "clawkit",

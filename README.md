@@ -19,7 +19,7 @@ Constructive feedback is very welcome, especially:
 
 Open an issue on GitHub:
 
-https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues
+https://github.com/MarcSean1971/clawkit-for-whisprai/issues
 
 ## Product Promise
 
