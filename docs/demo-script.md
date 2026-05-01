@@ -10,7 +10,7 @@ Show that WhisprAI can pair with a user's own OpenClaw computer without exposing
 
 ```bash
 openclaw plugins install @clawkit/clawkit-for-whisprai
-openclaw plugins enable whisprai
+openclaw plugins enable clawkit-whisprai
 openclaw gateway restart
 ```
 

@@ -24,7 +24,7 @@ https://github.com/MarcSean1971/whisprai-openclaw-plugin/issues
 
 ```bash
 openclaw plugins install @clawkit/clawkit-for-whisprai
-openclaw plugins enable whisprai
+openclaw plugins enable clawkit-whisprai
 openclaw gateway restart
 openclaw whisprai status
 ```

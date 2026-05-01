@@ -65,7 +65,7 @@ The plugin is designed for people who want WhisprAI to be more than a chat app. 
 
 ```bash
 openclaw plugins install @clawkit/clawkit-for-whisprai
-openclaw plugins enable whisprai
+openclaw plugins enable clawkit-whisprai
 openclaw gateway restart
 openclaw whisprai status
 ```
