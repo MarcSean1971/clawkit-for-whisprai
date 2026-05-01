@@ -1,7 +1,7 @@
 {
   "id": "clawkit-whisprai",
   "name": "ClawKit for WhisprAI",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Pair this OpenClaw computer with WhisprAI so Archie can act as a private local assistant.",
   "homepage": "https://whisprai.app",
   "repository": "https://github.com/MarcSean1971/clawkit-for-whisprai",
@@ -23,31 +23,31 @@
     "properties": {
       "whispraiUrl": {
         "type": "string",
-        "description": "WhisprAI app base URL. Environment fallback: WHISPRAI_URL."
+        "description": "WhisprAI app base URL."
       },
       "relayUrl": {
         "type": "string",
-        "description": "WhisprAI outbound relay URL. Environment fallback: WHISPRAI_RELAY_URL."
+        "description": "WhisprAI outbound relay URL."
       },
       "relayToken": {
         "type": "string",
-        "description": "Secret token used to poll the WhisprAI relay. Environment fallback: WHISPRAI_RELAY_TOKEN."
+        "description": "Secret token used to poll the WhisprAI relay."
       },
       "inboundUrl": {
         "type": "string",
-        "description": "WhisprAI inbound result URL. Environment fallback: WHISPRAI_INBOUND_URL."
+        "description": "WhisprAI inbound result URL."
       },
       "inboundSecret": {
         "type": "string",
-        "description": "Secret used when posting results back to WhisprAI. Environment fallback: WHISPRAI_INBOUND_SECRET."
+        "description": "Secret used when posting results back to WhisprAI."
       },
       "agentId": {
         "type": "string",
-        "description": "OpenClaw agent id shown in WhisprAI. Environment fallback: WHISPRAI_AGENT_ID."
+        "description": "OpenClaw agent id shown in WhisprAI."
       },
       "pollIntervalMs": {
         "type": "number",
-        "description": "Relay polling interval in milliseconds. Environment fallback: WHISPRAI_POLL_INTERVAL_MS."
+        "description": "Relay polling interval in milliseconds."
       }
     }
   }

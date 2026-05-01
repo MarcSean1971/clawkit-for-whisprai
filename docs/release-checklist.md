@@ -5,7 +5,7 @@
 - Run `npm test`.
 - Run `npm run pack:dry`.
 - Confirm `README.md` describes the command execution behavior clearly.
-- Confirm `README.md` and `SECURITY.md` explain that v0.1.1 uses plugin config or `WHISPRAI_*` environment variables instead of a local pairing state file.
+- Confirm `README.md` and `SECURITY.md` explain that persistent relay settings use OpenClaw plugin config instead of a local pairing state file.
 - Confirm issue templates are present.
 - Confirm the repository URL in `package.json` and `openclaw.plugin.json` is correct.
 
@@ -25,11 +25,11 @@ clawhub package publish . \
   --family code-plugin \
   --name @clawkit/clawkit-for-whisprai \
   --display-name "ClawKit for WhisprAI" \
-  --version 0.1.3 \
+  --version 0.1.4 \
   --source-repo MarcSean1971/clawkit-for-whisprai \
   --source-commit "$(git rev-parse HEAD)" \
   --source-ref main \
-  --changelog "Rename GitHub repository to clawkit-for-whisprai" \
+  --changelog "Use OpenClaw plugin config only for persistent relay settings" \
   --dry-run
 ```
 
@@ -42,6 +42,6 @@ Remove `--dry-run` after validation passes.
 - Install from ClawHub on a clean OpenClaw setup.
 - Run `openclaw whisprai status`.
 - Start and revoke pairing.
-- Confirm configured relay settings survive a gateway restart through plugin config or environment variables.
+- Confirm configured relay settings survive a gateway restart through plugin config.
 - Check ClawHub scan status.
 - Open a GitHub issue for any scanner notes or user-facing warnings that need clearer wording.

@@ -6,7 +6,7 @@ ClawKit for WhisprAI pairs a user's local OpenClaw computer with WhisprAI. Treat
 
 - Pairing is explicit and revocable.
 - The plugin polls WhisprAI from the user's computer; it does not require a public inbound tunnel to the computer.
-- Relay and inbound secrets should be stored in OpenClaw plugin config or `WHISPRAI_*` environment variables.
+- Relay and inbound secrets should be stored in OpenClaw plugin config.
 - The plugin keeps temporary pairing data in memory and does not read or write a local pairing state file.
 - Public status output masks secrets.
 - Hosted WhisprAI should never expose OpenClaw gateway URLs or relay secrets to normal users.

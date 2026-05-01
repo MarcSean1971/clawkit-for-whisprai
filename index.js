@@ -77,16 +77,13 @@ function optionalNumber(value) {
 }
 
 function stateFromRuntimeConfig() {
-  const relayUrl = optionalString(runtimeConfig.relayUrl) || optionalString(process.env.WHISPRAI_RELAY_URL);
-  const relayToken = optionalString(runtimeConfig.relayToken) || optionalString(process.env.WHISPRAI_RELAY_TOKEN);
-  const inboundUrl = optionalString(runtimeConfig.inboundUrl) || optionalString(process.env.WHISPRAI_INBOUND_URL);
-  const inboundSecret = optionalString(runtimeConfig.inboundSecret) || optionalString(process.env.WHISPRAI_INBOUND_SECRET);
-  const whispraiUrl = optionalString(runtimeConfig.whispraiUrl) || optionalString(process.env.WHISPRAI_URL) || DEFAULT_STATE.whispraiUrl;
-  const agentId = optionalString(runtimeConfig.agentId) || optionalString(process.env.WHISPRAI_AGENT_ID) || DEFAULT_STATE.agentId;
-  const pollIntervalMs =
-    optionalNumber(runtimeConfig.pollIntervalMs) ||
-    optionalNumber(process.env.WHISPRAI_POLL_INTERVAL_MS) ||
-    DEFAULT_STATE.pollIntervalMs;
+  const relayUrl = optionalString(runtimeConfig.relayUrl);
+  const relayToken = optionalString(runtimeConfig.relayToken);
+  const inboundUrl = optionalString(runtimeConfig.inboundUrl);
+  const inboundSecret = optionalString(runtimeConfig.inboundSecret);
+  const whispraiUrl = optionalString(runtimeConfig.whispraiUrl) || DEFAULT_STATE.whispraiUrl;
+  const agentId = optionalString(runtimeConfig.agentId) || DEFAULT_STATE.agentId;
+  const pollIntervalMs = optionalNumber(runtimeConfig.pollIntervalMs) || DEFAULT_STATE.pollIntervalMs;
 
   return {
     paired: Boolean(relayUrl && relayToken),
@@ -213,7 +210,7 @@ function persistenceNote() {
   return {
     mode: "memory",
     message:
-      "Marketplace-safe mode does not write pairing secrets to disk. Add relayUrl, relayToken, inboundUrl, and inboundSecret to OpenClaw plugin config or WHISPRAI_* environment variables for restart persistence.",
+      "Marketplace-safe mode does not write pairing secrets to disk. Add relayUrl, relayToken, inboundUrl, and inboundSecret to OpenClaw plugin config for restart persistence.",
   };
 }
 

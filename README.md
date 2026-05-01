@@ -30,7 +30,7 @@ The plugin is designed for people who want WhisprAI to be more than a chat app. 
 ## What It Does
 
 - Pairs this computer with WhisprAI using an explicit pairing flow.
-- Uses OpenClaw plugin config or `WHISPRAI_*` environment variables for persistent relay settings.
+- Uses OpenClaw plugin config for persistent relay settings.
 - Keeps temporary pairing state in memory instead of reading or writing local state files.
 - Polls WhisprAI for queued jobs.
 - Runs `openclaw agent` locally with the queued user request.
@@ -87,23 +87,23 @@ openclaw whisprai status
 2. The user opens WhisprAI and chooses Connect My Computer.
 3. The plugin creates a short pairing code.
 4. WhisprAI exchanges the pairing code for relay and inbound details.
-5. The user saves those details in OpenClaw plugin config or environment variables for persistence.
+5. The user saves those details in OpenClaw plugin config for persistence.
 6. The plugin polls for work and runs OpenClaw locally when Archie needs help.
 7. The user can revoke pairing at any time.
 
 ## Persistent Configuration
 
-Marketplace-safe mode does not read or write a local state file. Temporary pairing details can exist while the plugin process is running, but production use should configure the relay details in OpenClaw plugin settings or environment variables:
+Marketplace-safe mode does not read or write a local state file. Temporary pairing details can exist while the plugin process is running, but production use should configure the relay details in OpenClaw plugin settings:
 
-| Config key | Environment variable | Purpose |
-| --- | --- | --- |
-| `whispraiUrl` | `WHISPRAI_URL` | WhisprAI app URL. |
-| `relayUrl` | `WHISPRAI_RELAY_URL` | Hosted WhisprAI relay endpoint. |
-| `relayToken` | `WHISPRAI_RELAY_TOKEN` | Secret token used to poll queued work. |
-| `inboundUrl` | `WHISPRAI_INBOUND_URL` | Hosted WhisprAI result endpoint. |
-| `inboundSecret` | `WHISPRAI_INBOUND_SECRET` | Secret used to send results back. |
-| `agentId` | `WHISPRAI_AGENT_ID` | Local agent name shown in WhisprAI. |
-| `pollIntervalMs` | `WHISPRAI_POLL_INTERVAL_MS` | Relay polling interval. |
+| Config key | Purpose |
+| --- | --- |
+| `whispraiUrl` | WhisprAI app URL. |
+| `relayUrl` | Hosted WhisprAI relay endpoint. |
+| `relayToken` | Secret token used to poll queued work. |
+| `inboundUrl` | Hosted WhisprAI result endpoint. |
+| `inboundSecret` | Secret used to send results back. |
+| `agentId` | Local agent name shown in WhisprAI. |
+| `pollIntervalMs` | Relay polling interval. |
 
 After changing config, restart the OpenClaw gateway and run:
 
@@ -128,7 +128,7 @@ openclaw agent --session-id whisprai:<conversation_id> --message <request> --jso
 ## Security Model
 
 - Pairing is explicit and revocable.
-- Relay and inbound secrets should be configured through OpenClaw plugin settings or `WHISPRAI_*` environment variables.
+- Relay and inbound secrets should be configured through OpenClaw plugin settings.
 - The plugin no longer reads or writes a local state file for pairing details.
 - Status output masks secrets.
 - Hosted WhisprAI should never expose OpenClaw gateway URLs or secrets to normal users.
