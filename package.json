@@ -1,6 +1,6 @@
 {
   "name": "@clawkit/clawkit-for-whisprai",
-  "version": "0.1.6",
+  "version": "0.1.9",
   "description": "ClawKit bridge that pairs OpenClaw with WhisprAI Connect My Computer.",
   "type": "module",
   "license": "MIT",

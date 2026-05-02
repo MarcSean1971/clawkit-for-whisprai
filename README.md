@@ -174,7 +174,7 @@ openclaw whisprai relay poll
 ## Roadmap
 
 - Friendlier pairing page copy for non-technical users.
-- Stronger relay diagnostics and self-healing status messages. v0.1.5 improves silent-job handling and visible-reply extraction.
+- Stronger relay diagnostics and self-healing status messages. v0.1.9 keeps the public package on the correct ClawKit for WhisprAI name/source and improves silent-job handling, visible-reply extraction, and configurable OpenClaw launch settings.
 - Richer job types beyond simple assistant text.
 - Better user consent screens before sensitive local actions.
 - Optional GitHub issue/PR workflows through the user's OpenClaw tools.

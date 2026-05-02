@@ -14,7 +14,7 @@ ClawKit for WhisprAI connects WhisprAI's Archie assistant to the user's own Open
 
 Hosted WhisprAI does not need direct access to `127.0.0.1`, a home router, a public tunnel, or the user's OpenClaw gateway. This keeps the user's computer private while still letting Archie use the user's local OpenClaw setup, configured tools, coding environment, browser workflows, and approval model.
 
-Version 0.1.6 keeps the marketplace-safe config model from v0.1.4 and improves relay behavior: silent lifecycle jobs are acknowledged without noisy replies, OpenClaw JSON/JSONL output is parsed more reliably, and custom OpenClaw launch commands can be configured through plugin settings.
+Version 0.1.9 keeps the marketplace-safe config model and corrects the public ClawHub listing back to the proper ClawKit for WhisprAI name and source repository. It also improves relay behavior: silent lifecycle jobs are acknowledged without noisy replies, OpenClaw JSON/JSONL output is parsed more reliably, and custom OpenClaw launch commands can be configured through plugin settings.
 
 This is an early public release. It is useful now, and it will be updated continuously. Constructive feedback, especially pairing issues, relay failures, privacy questions, and non-technical usability suggestions, is welcome at:
 
@@ -38,7 +38,7 @@ clawhub package publish . \
   --family code-plugin \
   --name @clawkit/clawkit-for-whisprai \
   --display-name "ClawKit for WhisprAI" \
-  --version 0.1.6 \
+  --version 0.1.9 \
   --source-repo MarcSean1971/clawkit-for-whisprai \
   --source-commit "$(git rev-parse HEAD)" \
   --source-ref main \
@@ -63,4 +63,4 @@ clawhub package publish . \
 
 This plugin intentionally executes the local `openclaw agent` command. That is the product: WhisprAI queues work, and the user's own OpenClaw computer performs it locally. Marketplace scanners may flag command execution. The listing should make this clear so users understand exactly what they are installing.
 
-The plugin does not read or write a local pairing state file in v0.1.6. Relay credentials and optional OpenClaw launch settings should be configured through OpenClaw plugin settings.
+The plugin does not read or write a local pairing state file in v0.1.9. Relay credentials and optional OpenClaw launch settings should be configured through OpenClaw plugin settings.
