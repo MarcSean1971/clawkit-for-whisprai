@@ -4,12 +4,25 @@ ClawKit for WhisprAI lets a user pair their own OpenClaw computer with WhisprAI 
 
 Hosted WhisprAI does not need direct access to `127.0.0.1`, a home router, a public tunnel, or the user's OpenClaw gateway. The plugin polls WhisprAI for queued work, runs the local OpenClaw agent, and sends Archie the result.
 
+In WhisprAI this is surfaced through **Settings → OpenClaw Helper** and the Archie choices **In the cloud**, **Cloud + my computer**, and **On my computer**.
+
+## Archie Modes
+
+| Mode | What it means | Best device |
+| --- | --- | --- |
+| **In the cloud** | Archie uses the shared admin-managed OpenClaw Cloud/VPS tool. No personal computer is linked. | Mobile or desktop |
+| **Cloud + my computer** | Archie can use the shared cloud for VPS/Kali work and can also ask the user's linked computer when the task needs that computer. | Set up on desktop; usable later from mobile |
+| **On my computer** | Archie routes local-computer tasks to the user's paired OpenClaw computer through the outbound relay. | Desktop setup; mobile can use it after pairing |
+
+This plugin is the local/connector side for the last two modes. In **Cloud + my computer**, WhisprAI can present the setup as a lightweight connector. Under the hood it still uses OpenClaw to run the secure outbound relay, but the user should only need to download, open, and approve pairing.
+
 ## Early Public Release
 
 This is an early public release. It is useful now for pairing WhisprAI with OpenClaw, but it will be updated continuously as real users test more computers, operating systems, relay flows, and assistant workflows.
 
 Constructive feedback is very welcome, especially:
 
+- Installer or connector steps that felt confusing.
 - Pairing steps that felt confusing.
 - Relay jobs that did not complete.
 - OpenClaw responses that were not returned to Archie.
@@ -85,13 +98,17 @@ openclaw whisprai status
 
 ## Pairing Flow
 
-1. The user installs and enables the plugin in OpenClaw.
-2. The user opens WhisprAI and chooses Connect My Computer.
-3. The plugin creates a short pairing code.
+1. The user opens WhisprAI Settings and chooses **OpenClaw Helper**.
+2. On desktop, the user downloads the Windows, macOS, or Linux helper.
+3. The helper installs or updates OpenClaw and the plugin, starts the gateway, and asks for a short-lived pairing code.
 4. WhisprAI exchanges the pairing code for relay and inbound details.
-5. The user saves those details in OpenClaw plugin config for persistence.
+5. The plugin stores or receives those details through OpenClaw plugin config for persistence.
 6. The plugin polls for work and runs OpenClaw locally when Archie needs help.
 7. The user can revoke pairing at any time.
+
+If OpenClaw is already installed, setup should update OpenClaw and reinstall the latest plugin package without wiping existing OpenClaw config, plugins, approval settings, or WhisprAI pairing history.
+
+If the user later opens WhisprAI from mobile, they can still ask Archie to use the paired desktop computer as long as that computer is awake, online, and the connector is running. The phone itself is not paired; it is only the control surface.
 
 ## Persistent Configuration
 
@@ -138,6 +155,7 @@ openclaw agent --session-id whisprai:<conversation_id> --message <request> --jso
 - Status output masks secrets.
 - Hosted WhisprAI should never expose OpenClaw gateway URLs or secrets to normal users.
 - The plugin does not open public inbound access to the user's computer.
+- The plugin does not let one WhisprAI user access another user's paired computer.
 - Sensitive computer actions should continue to rely on OpenClaw approval flows.
 
 Important: this plugin intentionally launches the local `openclaw` executable with `node:child_process`. That is the core bridge behavior. ClawHub or other scanners may flag this as command execution. The command is scoped to `openclaw agent`, and users should install it only if they want WhisprAI to be able to ask their local OpenClaw agent for help.
@@ -173,8 +191,9 @@ openclaw whisprai relay poll
 
 ## Roadmap
 
-- Friendlier pairing page copy for non-technical users.
-- Stronger relay diagnostics and self-healing status messages. v0.1.9 keeps the public package on the correct ClawKit for WhisprAI name/source and improves silent-job handling, visible-reply extraction, and configurable OpenClaw launch settings.
+- Friendlier mobile/desktop pairing guidance for non-technical users.
+- Stronger relay diagnostics and self-healing status messages. v0.1.10 keeps the public package on the correct ClawKit for WhisprAI name/source, documents the new Archie modes, and preserves the silent-job handling, visible-reply extraction, and configurable OpenClaw launch settings from earlier releases.
+- Better Cloud + my computer connector copy, including temporary vs remembered links.
 - Richer job types beyond simple assistant text.
 - Better user consent screens before sensitive local actions.
 - Optional GitHub issue/PR workflows through the user's OpenClaw tools.

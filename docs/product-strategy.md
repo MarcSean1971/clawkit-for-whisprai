@@ -13,11 +13,14 @@ Core message:
 - WhisprAI users who want Archie to do real work, not only chat.
 - Developers who want Archie to use OpenClaw, GitHub, local repos, and browser workflows.
 - Power users who want a private local assistant controlled through a simple hosted interface.
+- Mobile users who want to ask Archie to use a desktop computer they already paired.
 - Teams that need explicit pairing, revocation, and local approval.
 
 ## Winning Features
 
 - Very simple Connect My Computer flow.
+- Clear Archie mode choice: In the cloud, Cloud + my computer, or On my computer.
+- Desktop setup with later mobile access to the same paired computer.
 - Clear status: paired, polling, last job, last error, revoked.
 - Friendly troubleshooting when pairing fails.
 - Strong security language that non-technical users can understand.
@@ -38,6 +41,7 @@ Core message:
 - Local health doctor command.
 - Better Windows/macOS/Linux setup docs. v0.1.5 adds configurable OpenClaw launch settings for environments where `openclaw` is not on `PATH`.
 - Signed package and checksum instructions.
+- Cleaner Cloud + my computer connector setup with temporary and remembered links.
 - Optional job types for repo inspection, browser testing, GitHub summaries, and file-safe workflows.
 - User-facing activity log in WhisprAI.
 - Better recovery from expired pairing codes, invalid relay tokens, silent lifecycle jobs, and OpenClaw output format changes.

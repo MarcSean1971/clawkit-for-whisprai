@@ -11,6 +11,13 @@ ClawKit for WhisprAI pairs a user's local OpenClaw computer with WhisprAI. Treat
 - Public status output masks secrets.
 - Hosted WhisprAI should never expose OpenClaw gateway URLs or relay secrets to normal users.
 - Sensitive local actions should remain protected by OpenClaw's normal approval flows.
+- One WhisprAI user must never be able to access another user's paired computer. Jobs should be scoped by user, session, and device.
+
+## Installer Trust
+
+WhisprAI's **Settings → OpenClaw Helper** flow offers downloadable installers for Windows, macOS, and Linux. These installers install or update OpenClaw, install **ClawKit for WhisprAI** from ClawHub, enable the plugin, restart the OpenClaw gateway, and optionally exchange a WhisprAI pairing code.
+
+For **Cloud + my computer**, WhisprAI may present the download as a lightweight computer connector. That connector still installs the OpenClaw CLI pieces required to run the outbound relay, but users should not need to configure OpenClaw, a VPN, router rules, or a public tunnel.
 
 ## Command Execution Notice
 
@@ -27,6 +34,7 @@ By default the plugin launches `openclaw` from `PATH`. Users may optionally conf
 ## What The Plugin Does Not Do
 
 - It does not create a public tunnel to the user's OpenClaw gateway.
+- It does not let one WhisprAI user access another user's paired computer.
 - It does not intentionally collect analytics.
 - It does not intentionally send local files by itself.
 - It does not read local files for pairing state.
